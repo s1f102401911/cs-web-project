@@ -23,6 +23,11 @@ header {
     background-color: bisque;
 }
 
+.menu-link li {
+    margin: 20px 0;
+    list-style-image:url(./img/yazirushi.webp);
+}
+
 main {
     width: 75%;
 }
