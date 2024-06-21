@@ -9,7 +9,22 @@ header {
 }
 
 .all-container {
-    margin: 5vh 5vw;
+    margin: 5vh 5vw 5vh 0;
+    display: flex;
+}
+
+.menu {
+    width: 25%;
+}
+
+.menu-img {
+    width: 300px;
+    height: 150px;
+    background-color: bisque;
+}
+
+main {
+    width: 75%;
 }
 
 .center {
