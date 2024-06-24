@@ -16,6 +16,7 @@ header {
 .menu {
     padding: 0 20px;
     width: 25%;
+    min-width: 170px;
 }
 
 .menu-img {
@@ -29,6 +30,17 @@ header {
     text-align: center;
     font-size: 140%;
     font-family: serif;
+}
+
+.menu-link li:first-child {
+    margin: 20px 0;
+    list-style-type: none;
+    background-image:url(./img/yazirushi.webp);
+    background-repeat: no-repeat;
+    background-position: left center;
+    filter: invert(100%) saturate(300%);
+    color: white;
+    padding-left: 40px;
 }
 
 .menu-link li {
