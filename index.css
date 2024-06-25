@@ -79,9 +79,80 @@ header {
 
 .caption {
     color: #fff;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
     font-size: 180%;
+}
+
+.hover-system+p {
+    font-size: 50%;
+    text-align: center;
+}
+
+.hover-system+p::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0d8";
+    font-size: 200%;
+    color: #000;
+    margin-right: 5px;
 }
 
 main {
     width: 75%;
+}
+
+main > div {
+    margin-left: 20px;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.color {
+    padding-left: 10px;
+}
+
+.color:nth-child(1) {
+    background-color: #e5faec;
+}
+
+.color:nth-child(2) {
+    background-color: #faf6e4;
+}
+
+.news-de {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.be121+div {
+    display: none;
+}
+
+.be121.active+div {
+    display: block;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 200%;
+    color: red;
+}
+
+.popup {
+    position: fixed;
+    padding: 15px;
+    top: 40vh;
+    left: 50%;
+    translate: -50%;
+    background-color: #def5ff;
+    box-shadow: 10px 10px 15px -10px;
 }

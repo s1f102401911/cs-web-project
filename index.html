@@ -24,6 +24,7 @@
                         </div>
                     </a>
                 </div>
+                <p>クリックすると公式サイトにジャンプします。</p>
                 <div class="menu-link">
                     <p>MENU</p>
                     <ul class="reset">
@@ -35,8 +36,58 @@
                 </div>
             </div>
             <main>
-                <h1>News</h1>
+                <div>
+                    <h1>Major Release Changelogs</h1>
+                    <div class="news">
+                        <div class="color">
+                            <h2>Bedrock Edition</h2>
+                            <div class="news-de">
+                                <p>2024/6/13</p>
+                                <div>
+                                    <p class="be121">1.21 (Tricky Trials)</p>
+                                    <div class="popup">
+                                        <i class="fa-solid fa-xmark"></i>
+                                        <p>Test content</p>
+                                    </div>
+                                </div>
+                                <p>2024/4/23</p>
+                                <p>1.20.80 (Armored Paws)</p>
+                                <p>2024/3/12</p>
+                                <p>1.20.70/71</p>
+                                <p>2023/12/5</p>
+                                <p>1.20.50</p>
+                                <p>2023/9/19</p>
+                                <p>1.20.30</p>
+                                <p>2023/7/11</p>
+                                <p>1.20.10</p>
+                                <p>2023/6/7</p>
+                                <p>1.20.0 (Trails & Tales)</p>
+                            </div>
+                        </div>
+                        <div class="color">
+                            <h2>Java Edition</h2>
+                            <div class="news-de">
+                                <p>2024/6/13</p>
+                                <p>1.21 (Tricky Trials)</p>
+                                <p>2024/4/23</p>
+                                <p>1.20.5 (Armored Paws)</p>
+                                <p>2023/6/7</p>
+                                <p>1.20 (Trails & Tales)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p>より詳細を知りたい方は<a href="https://feedback.minecraft.net/hc/en-us/sections/360001186971-Release-Changelogs">こちら</a></p>
+                </div>
             </main>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script>
+            $(".news-de p").click(function() {
+                $(this).addClass("active");
+            });
+            $(".fa-xmark").click(function() {
+                $(".news-de p").removeClass("active");
+            });
+        </script>
     </body>
 </html>

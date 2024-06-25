@@ -126,6 +126,10 @@ main {
     width: 75%;
 }
 
+main > div {
+    margin-left: 20px;
+}
+
 .center {
     text-align: center;
 }
