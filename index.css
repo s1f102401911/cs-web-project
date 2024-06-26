@@ -128,11 +128,11 @@ main > div {
     grid-template-columns: 1fr 2fr;
 }
 
-.be121+div {
+.button+div {
     display: none;
 }
 
-.be121.active+div {
+.button.active+div {
     display: block;
 }
 

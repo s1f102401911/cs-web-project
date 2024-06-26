@@ -44,14 +44,20 @@
                             <div class="news-de">
                                 <p>2024/6/13</p>
                                 <div>
-                                    <p class="be121">1.21 (Tricky Trials)</p>
+                                    <p class="button">1.21 (Tricky Trials)</p>
                                     <div class="popup">
                                         <i class="fa-solid fa-xmark"></i>
                                         <p>Test content</p>
                                     </div>
                                 </div>
                                 <p>2024/4/23</p>
-                                <p>1.20.80 (Armored Paws)</p>
+                                <div>
+                                    <p class="button">1.20.80 (Armored Paws)</p>
+                                    <div class="popup">
+                                        <i class="fa-solid fa-xmark"></i>
+                                        <p>Test content2</p>
+                                    </div>
+                                </div>
                                 <p>2024/3/12</p>
                                 <p>1.20.70/71</p>
                                 <p>2023/12/5</p>
@@ -82,9 +88,18 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script>
-            $(".news-de p").click(function() {
+            $(document).click(function(e) {
+                if(!$(e.target).closest(".popup").length) {
+                    $(".news-de p").removeClass("active");
+                }
+            });
+            $(".news-de p").click(function(e) {
+                e.stopPropagation();
                 $(this).addClass("active");
             });
+            //$(".news-de p").click(function() {
+            //    $(this).addClass("active");
+            //});
             $(".fa-xmark").click(function() {
                 $(".news-de p").removeClass("active");
             });
