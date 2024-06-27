@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.photo, .overview, .name {
+    background-color: #e0e0e0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo, .name {
+    width: 150px;
+    height: 150px;
+}
+
+.name {
+    height: 30px;
+}
+
+.overview {
+    width: 300px;
+    height: 150px;
+}
