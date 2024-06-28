@@ -16,6 +16,7 @@ header {
 .menu {
     padding: 0 20px;
     width: 25%;
+    min-width: 170px;
 }
 
 .menu-img {
@@ -31,6 +32,17 @@ header {
     font-family: serif;
 }
 
+.menu-link li:first-child {
+    margin: 20px 0;
+    list-style-type: none;
+    background-image:url(./img/yazirushi.webp);
+    background-repeat: no-repeat;
+    background-position: left center;
+    filter: invert(100%) saturate(300%);
+    color: white;
+    padding-left: 40px;
+}
+
 .menu-link li {
     margin: 20px 0;
     list-style-type: none;
@@ -40,11 +52,23 @@ header {
     padding-left: 40px;
 }
 
+.menu-link li:hover {
+    animation: rotate-arrow 2.5s forwards ease;
+}
+
+@keyframes rotate-arrow {
+    0% {transform: rotateX(0deg);}
+    40% {transform: rotateX(-60deg);}
+    60% {transform: rotateX(420deg);}
+    100% {transform: rotateX(360deg);}
+}
+
 .hover-system {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
 
 .mask {
@@ -67,9 +91,94 @@ header {
 
 .caption {
     color: #fff;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
     font-size: 180%;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.hover-system+p {
+    font-size: 50%;
+    text-align: center;
+}
+
+.hover-system+p::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f0d8";
+    font-size: 200%;
+    color: #000;
+    margin-right: 5px;
 }
 
 main {
     width: 75%;
+}
+
+main > div {
+    margin-left: 20px;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.color {
+    padding-left: 10px;
+}
+
+.color:nth-child(1) {
+    background-color: #e5faec;
+}
+
+.color:nth-child(2) {
+    background-color: #faf6e4;
+}
+
+.news-de {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/*
+.button {
+    color: #0000EE;
+    text-decoration: underline;
+} */
+
+.button+div {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.button.active+div {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f00d";
+    font-size: 200%;
+    color: red;
+}
+
+.popup {
+    position: fixed;
+    padding: 15px;
+    top: 40vh;
+    left: 50%;
+    translate: -50%;
+    background-color: #def5ff;
+    box-shadow: 10px 10px 15px -10px, 0px 7px 16px -6px, -10px 10px 15px -10px;
+    border-radius: 5px;
 }
