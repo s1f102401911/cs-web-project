@@ -81,6 +81,7 @@ header {
     aspect-ratio: 16 / 9;
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
 
 .mask {
@@ -106,6 +107,8 @@ header {
     font-family: "DotGothic16", sans-serif;
     font-weight: 400;
     font-size: 180%;
+    word-break: keep-all;
+    text-align: center;
 }
 
 .hover-system+p {

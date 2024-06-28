@@ -52,11 +52,23 @@ header {
     padding-left: 40px;
 }
 
+.menu-link li:hover {
+    animation: rotate-arrow 2.5s forwards ease;
+}
+
+@keyframes rotate-arrow {
+    0% {transform: rotateX(0deg);}
+    40% {transform: rotateX(-60deg);}
+    60% {transform: rotateX(420deg);}
+    100% {transform: rotateX(360deg);}
+}
+
 .hover-system {
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     position: relative;
+    border-radius: 5px;
 }
 
 .mask {
@@ -82,6 +94,8 @@ header {
     font-family: "DotGothic16", sans-serif;
     font-weight: 400;
     font-size: 180%;
+    word-break: keep-all;
+    text-align: center;
 }
 
 .hover-system+p {
@@ -109,6 +123,8 @@ main > div {
 .news {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .color {
@@ -127,6 +143,12 @@ main > div {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
+
+/*
+.button {
+    color: #0000EE;
+    text-decoration: underline;
+} */
 
 .button+div {
     opacity: 0;
@@ -153,9 +175,12 @@ main > div {
 .popup {
     position: fixed;
     padding: 15px;
-    top: 40vh;
+    top: 10vh;
     left: 50%;
+    height: 750px;
     translate: -50%;
     background-color: #def5ff;
-    box-shadow: 10px 10px 15px -10px;
+    box-shadow: 10px 10px 15px -10px, 0px 7px 16px -6px, -10px 10px 15px -10px;
+    border-radius: 5px;
+    overflow: auto;
 }
