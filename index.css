@@ -175,10 +175,12 @@ main > div {
 .popup {
     position: fixed;
     padding: 15px;
-    top: 40vh;
+    top: 10vh;
     left: 50%;
+    height: 750px;
     translate: -50%;
     background-color: #def5ff;
     box-shadow: 10px 10px 15px -10px, 0px 7px 16px -6px, -10px 10px 15px -10px;
     border-radius: 5px;
+    overflow: auto;
 }
