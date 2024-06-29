@@ -4,8 +4,14 @@
 }
 
 header {
-    height: 90px;
-    background-color: aquamarine;
+    height: 70px;
+    background-color: #ccecff;
+    padding: 20px 40px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
 }
 
 .all-container {
@@ -53,7 +59,7 @@ header {
 }
 
 .menu-link li:hover {
-    animation: rotate-arrow 2.5s forwards ease;
+    animation: rotate-arrow 2.5s 1.5s forwards ease;
 }
 
 @keyframes rotate-arrow {

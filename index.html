@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>ホームページ</title>
+        <title>マイクライフ: Home</title>
         <link rel="stylesheet" href="./index.css" type="text/css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
     </head>
     <body class="reset">
         <header>
-            <h1 class="reset">サイトタイトル</h1>
+            <h1 class="reset"><a href="./index.html">マイクライフ</a></h1>
         </header>
         <div class="all-container">
             <div class="menu">
@@ -30,7 +30,7 @@
                     <ul class="reset">
                         <li>ホーム</li>
                         <li><a href="./chara.html">キャラクター紹介</a></li>
-                        <li><a href="./arc.html">建築物紹介</a></li>
+                        <li><a href="./building.html">建築物紹介</a></li>
                         <li><a href="./mod.html">MOD紹介</a></li>
                     </ul>
                 </div>
@@ -319,6 +319,11 @@
                 }
             });
             $(".news-de p").click(function(e) {
+                if(!$(e.target).hasClass("active")) {
+                    $(".news-de p").removeClass("active")
+                }
+            })
+            $(".news-de p").click(function(e) {
                 e.stopPropagation();
                 $(this).addClass("active");
                 return false
@@ -327,9 +332,6 @@
             //    $(this).addClass("active");
             //});
             $(".fa-xmark").click(function() {
-                $(".news-de p").removeClass("active");
-            });
-            $(".button > a").click(function() {
                 $(".news-de p").removeClass("active");
             });
         </script>

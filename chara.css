@@ -8,8 +8,14 @@ html {
 }
 
 header {
-    height: 90px;
-    background-color: aquamarine;
+    height: 70px;
+    background-color: #ccecff;
+    padding: 20px 40px 0;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
 }
 
 .all-container {
@@ -74,6 +80,17 @@ header {
     background-repeat: no-repeat;
     background-position: left center;
     padding-left: 40px;
+}
+
+.menu-link li:hover {
+    animation: rotate-arrow 2.5s 1.5s forwards ease;
+}
+
+@keyframes rotate-arrow {
+    0% {transform: rotateX(0deg);}
+    40% {transform: rotateX(-60deg);}
+    60% {transform: rotateX(420deg);}
+    100% {transform: rotateX(360deg);}
 }
 
 .hover-system {
